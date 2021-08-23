@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.orange";
+option java_outer_classname = "Carros";
+option objc_class_prefix = "HLW";
+
+package com.orange;
+
+service CarrosService {
+  rpc send (CarrosRequest) returns (CarrosReply) {}
+}
+
+message CarrosRequest {
+  string name = 1;
+}
+
+message CarrosReply {
+  string message = 1;
+}
